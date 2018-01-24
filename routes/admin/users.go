@@ -57,7 +57,7 @@ func NewUser(c *context.Context) {
 	c.HTML(200, USER_NEW)
 }
 
-func NewUserPost(c *context.Context, f form.AdminCrateUser) {
+func NewUserPost(c *context.Context, f form.AdminCreateUser) {
 	c.Data["Title"] = c.Tr("admin.users.new_account")
 	c.Data["PageIsAdmin"] = true
 	c.Data["PageIsAdminUsers"] = true
