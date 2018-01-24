@@ -9,7 +9,7 @@ import (
 	"gopkg.in/macaron.v1"
 )
 
-type AdminCrateUser struct {
+type AdminCreateUser struct {
 	LoginType  string `binding:"Required"`
 	LoginName  string
 	UserName   string `binding:"Required;AlphaDashDot;MaxSize(35)"`
@@ -18,7 +18,7 @@ type AdminCrateUser struct {
 	SendNotify bool
 }
 
-func (f *AdminCrateUser) Validate(ctx *macaron.Context, errs binding.Errors) binding.Errors {
+func (f *AdminCreateUser) Validate(ctx *macaron.Context, errs binding.Errors) binding.Errors {
 	return validate(errs, ctx.Data, f, ctx.Locale)
 }
 
